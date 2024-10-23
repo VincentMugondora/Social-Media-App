@@ -6,9 +6,11 @@ const TextInput = React.forwardRef(
     ref
   ) => {
     return (
-      <div className='w-full flex flex-col mt-2'>
+      <div classNameName="w-full flex flex-col mt-2">
         {label && (
-          <p className={`text-ascent-2 text-sm mb-2 ${labelStyles}`}>{label}</p>
+          <p classNameName={`text-ascent-2 text-sm mb-2 ${labelStyles}`}>
+            {label}
+          </p>
         )}
 
         <div>
@@ -17,13 +19,13 @@ const TextInput = React.forwardRef(
             name={name}
             placeholder={placeholder}
             ref={ref}
-            className={`bg-secondary rounded border border-[#66666690] outline-none text-sm text-ascent-1 px-4 py-3 placeholder:text-[#666] ${styles}`}
+            classNameName={`bg-secondary rounded border border-[#66666690] outline-none text-sm text-ascent-1 px-4 py-3 placeholder:text-[#666] ${styles}`}
             {...register}
             aria-invalid={error ? "true" : "false"}
           />
         </div>
         {error && (
-          <span className='text-xs text-[#f64949fe] mt-0.5 '>{error}</span>
+          <span classNameName="text-xs text-[#f64949fe] mt-0.5 ">{error}</span>
         )}
       </div>
     );

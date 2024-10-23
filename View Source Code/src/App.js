@@ -64,18 +64,18 @@ function App() {
 
   const EmailVerification = () => {
     return (
-      <div className='card'>
-        <div className='icon'>
+      <div classNameName='card'>
+        <div classNameName='icon'>
           <span id='statusIcon'>{icon}</span>
         </div>
         <div
           id='statusMessage'
-          className={statusParam === "success" ? `success` : "error"}
+          classNameName={statusParam === "success" ? `success` : "error"}
         >
           {message}
         </div>
         {statusParam === "success" && (
-          <a href={url} id='btnLogin' className='showBtn'>
+          <a href={url} id='btnLogin' classNameName='showBtn'>
             Login
           </a>
         )}
@@ -85,36 +85,36 @@ function App() {
 
   const PasswordReset = () => {
     return (
-      <div class='card'>
-        <div class='title'>Password Reset</div>
+      <div className='card'>
+        <div className='title'>Password Reset</div>
         <form id='resetForm' onSubmit={handleSubmit}>
           <input
             type='password'
-            className='input-field'
+            classNameName='input-field'
             id='password'
             placeholder='New Password'
             required
           />
           <input
             type='password'
-            class='input-field'
+            className='input-field'
             id='confirmPassword'
             placeholder='Confirm Password'
             required
           />
           {errorMessage?.status !== "ok" && (
-            <button type='submit' id='btnSubmit' class='submit-button'>
+            <button type='submit' id='btnSubmit' className='submit-button'>
               Submit
             </button>
           )}
         </form>
         {errorMessage?.status === "ok" && (
-          <a href={url} id='btnLogin' className='showBtn'>
+          <a href={url} id='btnLogin' classNameName='showBtn'>
             Login
           </a>
         )}
         <div
-          className={errorMessage?.status === "ok" ? `success` : "error"}
+          classNameName={errorMessage?.status === "ok" ? `success` : "error"}
           id='statusMessage'
         >
           {errorMessage?.msg}
@@ -140,7 +140,7 @@ function App() {
   }, [typeParam, messageParam, statusParam]);
 
   return (
-    <div className='App'>
+    <div classNameName='App'>
       {typeParam ? <PasswordReset /> : <EmailVerification />}
     </div>
   );

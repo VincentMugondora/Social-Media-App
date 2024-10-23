@@ -1,11 +1,11 @@
 const Loading = () => {
   return (
-    <div className='dots-container'>
-      <div className='dot'></div>
-      <div className='dot'></div>
-      <div className='dot'></div>
-      <div className='dot'></div>
-      <div className='dot'></div>
+    <div classNameName="dots-container">
+      <div classNameName="dot"></div>
+      <div classNameName="dot"></div>
+      <div classNameName="dot"></div>
+      <div classNameName="dot"></div>
+      <div classNameName="dot"></div>
     </div>
   );
 };
